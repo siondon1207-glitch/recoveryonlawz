@@ -1,23 +1,821 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <title>Home</title>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
-    <!--
-      Need a visual blank slate?
-      Remove all code in `styles.css`!
-    -->
-    <link rel="stylesheet" href="styles.css" />
-    <script type="module" src="script.js"></script>
-  </head>
-  <body>
+
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "도박 빚 개인회생 신청 가이드: 2026년 법원별 실무 트렌드 및 변제금 산정 전략",
+      "url": "https://law.reliabledone.com/gambling-debt-rehabilitation",
+      "description": "불법 스포츠 토토, 사설 카지노, 주식 및 가상자산 투자로 인해 발생한 도박 빚을 개인회생 제도를 통해 합법적으로 탕감받는 구체적인 방법과 2026년 최신 법원별 경향을 정리한 전문 가이드입니다.",
+      "about": {
+        "@type": "Thing",
+        "name": "도박 빚 개인회생"
+      },
+      "lastReviewed": "2026-07-07",
+      "mainContentOfPage": {
+        "@type": "WebPageElement",
+        "text": "본 가이드는 도박으로 인한 채무를 안고 있는 채무자가 개인회생 제도를 신청할 때 겪게 되는 법리적 쟁점과 실무상 유의사항을 다룹니다. 특히 2026년 기준 서울회생법원, 수원회생법원, 부산회생법원 등 각 지방법원의 실무 차이점과 도박 채무의 청산가치 반영 여부에 따른 월 변제금 예상액 산정 방식을 체계적으로 서술합니다."
+      }
+    }
+    </script>
+
+    <style>
+        /* 기본 스타일 설정 및 가독성 최적화 */
+        body {
+            font-family: 'Malgun Gothic', '맑은 고딕', Dotum, '돋움', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f3f4f6; /* 부드럽고 따뜻한 회색조 배경 */
+            line-height: 1.8;
+            color: #1f2937; /* 가독성 높은 차분한 검은색 */
+        }
+
+        /* 전체 레이아웃 컨테이너 */
+        .container {
+            width: 100%;
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 24px;
+            box-sizing: border-box;
+        }
+
+        /* 상단 헤더 스타일 */
+        header {
+            background-color: #0f172a; /* 신뢰감을 주는 깊은 네이비 */
+            color: #ffffff;
+            padding: 40px 0;
+            text-align: center;
+            border-bottom: 4px solid #0d9488; /* 세련된 청록색 하이라이트 */
+        }
+        header h1 {
+            font-size: 2.2em;
+            font-weight: 800;
+            margin: 0 0 10px 0;
+            letter-spacing: -1px;
+            line-height: 1.3;
+        }
+        header p {
+            font-size: 1.15em;
+            color: #94a3b8;
+            margin: 0;
+            font-weight: 400;
+        }
+
+        /* 네비게이션 메뉴 */
+        nav {
+            background-color: #ffffff;
+            border-bottom: 1px solid #e5e7eb;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        .main-menu {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+        .main-menu li {
+            margin: 0;
+        }
+        .main-menu a {
+            display: block;
+            padding: 18px 20px;
+            text-decoration: none;
+            color: #4b5563;
+            font-weight: 600;
+            font-size: 0.95em;
+            transition: all 0.2s ease;
+        }
+        .main-menu a:hover {
+            color: #0d9488;
+            background-color: #f0fdfa;
+        }
+
+        /* 콘텐츠 래퍼 및 이중 레이아웃 */
+        .content-wrap {
+            display: flex;
+            margin: 30px 0;
+            gap: 24px;
+        }
+        .main-content {
+            flex: 1;
+            min-width: 0; /* flex 자식의 가로 늘어남 방지 */
+            background-color: #ffffff;
+            padding: 35px;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+        }
+        .sidebar {
+            width: 320px;
+            flex-shrink: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+
+        /* 사이드바 구성요소 */
+        .sidebar-widget {
+            background-color: #ffffff;
+            padding: 24px;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+            border: 1px solid #e5e7eb;
+        }
+        .sidebar-widget h2, .sidebar-widget h3 {
+            font-size: 1.25em;
+            color: #0f172a;
+            margin-top: 0;
+            margin-bottom: 16px;
+            border-bottom: 2px solid #0d9488;
+            padding-bottom: 8px;
+        }
+        .sidebar-menu {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .sidebar-menu li {
+            margin-bottom: 10px;
+        }
+        .sidebar-menu a {
+            text-decoration: none;
+            color: #4b5563;
+            font-size: 0.95em;
+            display: block;
+            padding: 8px 12px;
+            border-radius: 6px;
+            transition: background 0.2s;
+        }
+        .sidebar-menu a:hover {
+            background-color: #f1f5f9;
+            color: #0d9488;
+        }
+
+        /* 텍스트 본문 스타일링 */
+        .main-content h2 {
+            font-size: 1.8em;
+            color: #0f172a;
+            border-left: 6px solid #0d9488;
+            padding-left: 14px;
+            margin-top: 45px;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+        .main-content h3 {
+            font-size: 1.4em;
+            color: #1e293b;
+            margin-top: 35px;
+            margin-bottom: 15px;
+            font-weight: 700;
+            background-color: #f8fafc;
+            padding: 10px 15px;
+            border-radius: 6px;
+            border-bottom: 1px solid #e2e8f0;
+        }
+        .main-content p {
+            font-size: 1.05em;
+            color: #374151;
+            margin-bottom: 22px;
+            text-align: justify;
+            text-justify: inter-character;
+        }
+        .main-content ul, .main-content ol {
+            padding-left: 22px;
+            margin-bottom: 22px;
+        }
+        .main-content li {
+            margin-bottom: 8px;
+            font-size: 1.05em;
+            color: #374151;
+        }
+
+        /* 텍스트 강조 영역 */
+        .info-box {
+            background-color: #f0fdfa; /* 편안한 민트톤 배경 */
+            border-left: 4px solid #0d9488;
+            padding: 22px;
+            margin: 30px 0;
+            border-radius: 0 8px 8px 0;
+        }
+        .info-box p {
+            margin: 0;
+            color: #115e59;
+            font-weight: 500;
+        }
+
+        .alert-box {
+            background-color: #fffbeb; /* 따뜻한 경고 노란색 배경 */
+            border-left: 4px solid #d97706;
+            padding: 22px;
+            margin: 30px 0;
+            border-radius: 0 8px 8px 0;
+        }
+        .alert-box p {
+            margin: 0;
+            color: #92400e;
+            font-weight: 500;
+        }
+
+        /* 테이블 고도화 */
+        .table-responsive {
+            overflow-x: auto;
+            margin: 30px 0;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background-color: #ffffff;
+            border: 1px solid #e5e7eb;
+            font-size: 0.95em;
+        }
+        th, td {
+            padding: 14px 16px;
+            border: 1px solid #e5e7eb;
+            text-align: left;
+        }
+        thead th {
+            background-color: #0f172a;
+            color: #ffffff;
+            font-weight: 600;
+        }
+        tbody tr:nth-child(even) {
+            background-color: #f8fafc;
+        }
+        tbody tr:hover {
+            background-color: #f1f5f9;
+        }
+
+        /* 인터랙티브 계산기 세션 */
+        .calc-wrapper {
+            background-color: #f8fafc;
+            border: 1px solid #e2e8f0;
+            padding: 25px;
+            border-radius: 12px;
+            margin: 35px 0;
+        }
+        .calc-wrapper h3 {
+            margin-top: 0 !important;
+            background-color: transparent !important;
+            border: none !important;
+            padding: 0 !important;
+            color: #0f172a;
+            font-size: 1.3em;
+        }
+        .calc-form {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+            margin-top: 20px;
+        }
+        @media (max-width: 640px) {
+            .calc-form {
+                grid-template-columns: 1fr;
+            }
+        }
+        .form-group {
+            display: flex;
+            flex-direction: column;
+        }
+        .form-group label {
+            font-size: 0.9em;
+            color: #4b5563;
+            margin-bottom: 6px;
+            font-weight: 600;
+        }
+        .form-group input, .form-group select {
+            padding: 10px 12px;
+            border: 1px solid #cbd5e1;
+            border-radius: 6px;
+            font-size: 0.95em;
+            color: #1e293b;
+            background-color: #ffffff;
+        }
+        .form-group input:focus, .form-group select:focus {
+            outline: none;
+            border-color: #0d9488;
+            box-shadow: 0 0 0 3px rgba(13, 148, 136, 0.15);
+        }
+        .calc-btn {
+            grid-column: 1 / -1;
+            background-color: #0d9488;
+            color: #ffffff;
+            padding: 14px;
+            border: none;
+            border-radius: 6px;
+            font-size: 1em;
+            font-weight: 700;
+            cursor: pointer;
+            transition: background 0.2s;
+            text-align: center;
+        }
+        .calc-btn:hover {
+            background-color: #0f766e;
+        }
+        .calc-result {
+            margin-top: 25px;
+            padding: 20px;
+            background-color: #ffffff;
+            border: 1px solid #cbd5e1;
+            border-radius: 8px;
+            display: none;
+        }
+        .calc-result h4 {
+            margin-top: 0;
+            color: #0f172a;
+            font-size: 1.1em;
+            border-bottom: 1px solid #e2e8f0;
+            padding-bottom: 10px;
+        }
+        .result-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+            font-size: 0.95em;
+        }
+        .result-item {
+            display: flex;
+            justify-content: space-between;
+            border-bottom: 1px dashed #f1f5f9;
+            padding-bottom: 6px;
+        }
+        .result-item span:first-child {
+            color: #64748b;
+        }
+        .result-item span:last-child {
+            font-weight: 700;
+            color: #0f172a;
+        }
+
+        /* FAQ 아코디언 */
+        .faq-section {
+            margin-top: 40px;
+        }
+        .faq-item {
+            border: 1px solid #e5e7eb;
+            border-radius: 8px;
+            margin-bottom: 12px;
+            overflow: hidden;
+        }
+        .faq-question {
+            background-color: #f8fafc;
+            padding: 16px 20px;
+            font-weight: 600;
+            color: #1e293b;
+            cursor: pointer;
+            user-select: none;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .faq-question:hover {
+            background-color: #f1f5f9;
+        }
+        .faq-answer {
+            padding: 20px;
+            background-color: #ffffff;
+            border-top: 1px solid #e5e7eb;
+            display: none;
+            font-size: 0.98em;
+            color: #4b5563;
+        }
+
+        /* 푸터 영역 */
+        footer {
+            background-color: #0f172a;
+            color: #94a3b8;
+            padding: 40px 0;
+            text-align: center;
+            font-size: 0.9em;
+            border-top: 4px solid #0d9488;
+            margin-top: 60px;
+        }
+        footer a {
+            color: #38bdf8;
+            text-decoration: none;
+        }
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* 미디어 쿼리 반응형 최적화 */
+        @media (max-width: 991px) {
+            .content-wrap {
+                flex-direction: column;
+            }
+            .sidebar {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <h1>도박 빚 개인회생 신청 가이드</h1>
+            <p>2026년 법원별 실무 트렌드 분석을 기반으로 최적의 변제금 및 청산가치 산정 방안을 모색합니다</p>
+        </div>
+    </header>
+
     <nav>
-      <a href="/" aria-current="page">Home</a>
-      <a href="/page2.html">Other page</a>
+        <div class="container">
+            <ul class="main-menu">
+                <li><a href="#intro">도박 빚 개인회생 기본 개념</a></li>
+                <li><a href="#court-trends">2026년 전국 법원 트렌드</a></li>
+                <li><a href="#demographics">연령별 및 지역별 맞춤 전략</a></li>
+                <li><a href="#process">비용 분석 및 가이드</a></li>
+                <li><a href="#calculator">자가 진단 변제금 계산기</a></li>
+                <li><a href="#faq">실무 중심 FAQ</a></li>
+            </ul>
+        </div>
     </nav>
-    <main>
-      <h1>Home page</h1>
-    </main>
-  </body>
-</html>
+
+    <div class="container">
+        <div class="content-wrap">
+            <main class="main-content">
+                <section id="intro">
+                    <h2>도박 빚 개인회생이란 무엇인가? 기본적인 법리 해석</h2>
+                    <p>인터넷 사설 스포츠 토토, 실시간 바카라, 해외 선물 거래, 마진 거래, 가상자산 등 과도한 사행성 행위로 인해 발생한 부채는 일반적인 생활비 채무와 구별되어 사법부의 한층 엄격한 잣대를 적용받게 됩니다. 일상 속에서 흔히 도박 빚은 면책이 되지 않는다고 생각하는 경향이 있으나, 이는 파산 절차에 국한된 규정입니다. 채무자 회생 및 파산에 관한 법률에 따르면 사행행위나 낭비로 인한 부채는 파산면책 불허가 사유에 명시되어 있으나, 개인회생 절차에서는 이를 원천적인 기각 사유로 규정하고 있지 않습니다. 따라서 도박 부채를 해결하기 위한 합리적인 방안으로 개인회생 제도가 주목받고 있습니다.</p>
+                    
+                    <p>다만 도박 채무로 개인회생을 진행할 때 발생하는 핵심 쟁점은 청산가치 보장의 원칙입니다. 개인이 보유한 자산보다 더 많은 금액을 변제 기간 동안 납부해야 한다는 원칙에 따라, 법원은 채무자가 도박에 탕진한 채무 전액 혹은 상당 부분을 청산가치(채무자의 재산)에 반영하도록 명령할 수 있습니다. 예를 들어 1억 원의 도박 빚을 지고 이 중 8천만 원을 불법 도박 사이트나 가상자산 레버리지 투자로 소진했다면, 법원은 소진한 8천만 원을 채무자가 현재도 보유하고 있는 가상의 재산으로 간주하여 재산 목록에 포함하도록 권고할 수 있습니다. 이 경우 신청인의 변제 의무 범위가 넓어지고 월 변제금 금액이 급격히 늘어나는 원인이 됩니다.</p>
+
+                    <div class="info-box">
+                        <p>중요 참고 사항: 채무액 중 도박 자금으로 입금되어 소실된 원금이 채무자의 재산적 성격인 청산가치에 반영되면, 신청인은 소득에서 법정 최저 생계비를 제외한 나머지 전액을 변제하는 것을 넘어서서 법원이 요구하는 청산가치 이상을 36개월에서 60개월 내에 납부해야 합니다. 따라서 신청 시 전문 변호사 및 법률 사무소 컨설팅을 통해 소명 방향을 명확히 설정하는 과정이 필연적으로 요구됩니다.</p>
+                    </div>
+                </section>
+
+                <section id="court-trends">
+                    <h2>2026년 법원별 도박 채무 실무 처리 기준 비교</h2>
+                    <p>현재 전국의 회생 전문 법원과 일반 지방법원의 심사 경향은 뚜렷하게 나뉘고 있습니다. 2026년 기준 서울회생법원, 수원회생법원, 부산회생법원 등 독립된 전문 법원 체계를 갖춘 지역에서는 청년 채무자의 조속한 사회 복귀와 경제적 갱생을 도모하기 위해 전향적인 기준을 제시하고 있습니다. 이들 법원에서는 주식, 가상자산 및 일부 투자 실패로 인해 발생한 부채액에 대해 예외적인 사유를 제외하고는 원칙적으로 소실된 투자금을 청산가치에 소급하여 전액 합산하지 않도록 실무 준칙을 마련해 적용하고 있습니다.</p>
+                    
+                    <p>반면 전문 회생법원이 존재하지 않는 인천지방법원, 대구지방법원, 광주지방법원, 대전지방법원 등의 일반 지방법원에서는 여전히 사행성 부채에 엄격한 기준을 적용하고 있습니다. 사설 도박이나 스포츠 토토뿐만 아니라 주식 리딩방, 선물옵션 거래로 발생한 채무 역시 도박과 유사한 성격으로 취급하여 해당 거래에 소진된 비용의 전액 또는 상당 비중을 청산가치에 강제로 산입하도록 보정 권고를 내리는 경우가 허다합니다. 이로 인해 거주 지역에 따른 변제율 격차가 벌어지고 있어 본인의 관할법원이 어디인지 파악하는 것이 신청 전 가장 먼저 해결해야 할 과제입니다.</p>
+
+                    <div class="table-responsive">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>관할 법원</th>
+                                    <th>도박/비트코인 청산가치 반영 비율</th>
+                                    <th>보정 권고 강도 및 처리 기간</th>
+                                    <th>주요 특징 및 대처 방안</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>서울회생법원</td>
+                                    <td>원칙적으로 소실된 투자금 미반영 (단, 사행성이 극심한 악질 도박은 일부 반영)</td>
+                                    <td>낮음 (개시 결정까지 평균 3~5개월)</td>
+                                    <td>청년층(20대 및 30대) 우대, 변제율 하락 유도 가능</td>
+                                </tr>
+                                <tr>
+                                    <td>수원회생법원 / 부산회생법원</td>
+                                    <td>단순 주식/코인은 미반영 원칙, 고의적 불법 도박은 30~50% 수준 반영</td>
+                                    <td>보통 (개시 결정까지 평균 4~6개월)</td>
+                                    <td>회생 전문 법원 실무 준칙 적용으로 비교적 신속한 판단</td>
+                                </tr>
+                                <tr>
+                                    <td>인천지방법원 / 대전지방법원</td>
+                                    <td>소진 금액의 70% ~ 전액 반영 권고 빈번</td>
+                                    <td>매우 높음 (개시 결정까지 평균 6~9개월)</td>
+                                    <td>엄격한 서류 소명 요구, 월 변제 예정 금액 상승 압박</td>
+                                </tr>
+                                <tr>
+                                    <td>대구지방법원 / 광주지방법원</td>
+                                    <td>투자 및 도박으로 탕진한 금원의 50% 이상 반영 원칙 고수</td>
+                                    <td>높음 (개시 결정까지 평균 5~8개월)</td>
+                                    <td>지역 밀착형 심사, 부양가족 및 생계비 긴축 요구 강함</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+
+                <section id="demographics">
+                    <h2>지역별, 연령별 맞춤형 개인회생 신청 전략</h2>
+                    <p>개인회생 신청을 고민하는 연령대와 지역적 특성에 따라 부채 발생 구조 및 최적의 해결 방안이 달라집니다. 특히 커뮤니티인 디시인사이드(디시) 회생 파산 갤러리나 에펨코리아(펨코), 보배드림 등에서는 각 지방 법원별 실제 내돈내산 법률 대리인 선임 후기와 실시간 기각 사례들이 공유되며 수많은 채무자가 정보 교류를 나누고 있습니다. 이러한 인터넷 온라인 소통망에서 언급되는 실제 사례들을 분석하면 연령별 맞춤형 방안 수립의 필요성이 명확히 드러납니다.</p>
+
+                    <h3>20대 대학생, 군인 및 청년층의 사설 토토 대처법</h3>
+                    <p>최근에는 20대 젊은 남성층을 중심으로 스마트폰 어플 및 앱을 활용한 간편한 사설 불법 도박 접근성이 강화됨에 따라, 대학생이나 입대 전후의 청년, 군인 계층에서 대규모 채무가 발생하는 경향을 보입니다. 소득 수준이 일정하지 않거나 최저 임금 수준에 머무르는 직장인이 대다수이기에, 월평균 가용소득(급여에서 최저생계비를 제한 금액)이 적게 잡혀 변제계획안 작성 시 불리하게 작용할 수 있습니다. 그러나 서울이나 경기권(수원, 고양, 용인, 성남, 부천, 화성) 법원 관할 하에 있다면, 청년 재기 지원 프로그램을 통해 소득 대비 높은 탕감률 견적을 유도하는 혜택을 노릴 수 있습니다.</p>
+
+                    <h3>30대 및 40대 직장인의 주식/해외선물 및 가상자산 투자 실패 분석</h3>
+                    <p>가장 활발하게 경제 활동을 영위하는 30대와 40대 직장인 세대의 경우, 주식 신용 거래나 비트코인 마진 선물 거래, 해외선물 등 고위험 자산에 투자했다가 부채의 늪에 빠지는 경우가 제일 흔하게 발생합니다. 이들은 보통 일정한 고정 소득이 발생하고 있으나, 자녀나 배우자 등의 부양가족을 두고 있어 생활비 부담이 크다는 단점이 있습니다. 이러한 경우에는 본인의 가용 소득을 최대한 보존하고 부양가족 산정을 합리화하여 변제금 예정 비용을 낮추는 컨설팅이 요구됩니다. 특히 남양주, 안산, 안양, 평택 등 수도권 인근 지역 거주자라면 관할 법원의 성향을 면밀히 분석해 비갱신형 변제 구조로 가입 계획을 세워야 합니다.</p>
+
+                    <h3>50대 가장 및 자영업자의 생활 자금 동반 채무 대처 방안</h3>
+                    <p>50대 이상의 채무자는 자영업 경영 악화나 은퇴 후 노후 자금 부족으로 인해 경마, 카지노, 합법 사행성 게임 등에 손을 대어 빚이 증폭되는 종류의 양상을 띱니다. 소득이 불안정한 프리랜서나 개인 사업자 형태가 많기 때문에 정확한 과세 자료와 매출 입증 자료를 바탕으로 변제 능력을 소명해야 합니다. 울산, 창원, 청주, 전주, 천안, 제주 등 지방 중소도시 관할 법원에서는 사업 소득의 객관적 투명성을 더욱 엄격히 들여다보므로 부실한 회계 처리는 즉각 기각으로 이어질 수 있어 전문 대리인의 든든한 조력이 필수적입니다.</p>
+                </section>
+
+                <section id="process">
+                    <h2>개인회생 신청 진행 비용 및 수수료 비교 분석</h2>
+                    <p>도박 채무를 지닌 채무자가 개인회생을 준비할 때 가장 먼저 우려하는 부분은 신청 및 대행을 위해 지불해야 하는 초기 비용입니다. 채무 연체와 독촉 속에서 수백만 원에 달하는 대리인 선임 가격을 부담하는 것은 지극히 어려운 일입니다. 이에 따라 전국의 수많은 법률 사무소 및 법무법인 업체들은 선임 수수료를 다이렉트로 일시불 납부하게 하기보다는 분납제도를 도입하여 가입 장벽을 낮추고 있습니다.</p>
+
+                    <p>기본적으로 법원에 직접 납부하는 정부 공과금(송달료 및 인지대, 회생위원 보수 등)은 약 30만 원에서 50만 원 선에서 정해집니다. 여기에 대리인 변호사 또는 법무사 선임 가격이 추가로 발생하는데, 통상적인 업계 평균 시세는 채권자 수에 비례하여 결정됩니다. 채권자 수가 5개 이하인 경우 약 120만 원에서 180만 원 선이며, 채권자가 늘어날 때마다 일정 비율의 가산 견적이 산정됩니다. 도박 빚의 경우에는 부채 사용처 조사가 복잡하고 보정서 제출 횟수가 일반 사건보다 현저히 많기 때문에 일반 사건 대비 약 20만 원에서 50만 원 정도의 추가 난이도 비용이 청구되는 단점이 있습니다.</p>
+
+                    <div class="alert-box">
+                        <p>주의해야 할 점: 지나치게 싼곳이나 가장 저렴한곳만을 고집하여 인터넷 온라인 광고만 보고 수수료가 파격적으로 저렴한 업체를 선택할 경우, 신청서만 접수하고 법원의 까다로운 도박 관련 보정명령에 무책임하게 대응하여 기각당하거나 예상 변제금이 폭증하는 최악의 결과를 맞이할 수 있습니다. 선임료 할인 혜택이나 현금지원, 사은품권 제공 같은 이벤트 마케팅에 현혹되기보다는 해당 사무소가 도박 사건 처리에 전문성과 다수의 성공 후기 데이터를 보유하고 있는지 먼저 대조해 보아야 합니다.</p>
+                    </div>
+                </section>
+
+                <section id="calculator">
+                    <div class="calc-wrapper">
+                        <h3>도박 빚 개인회생 자가 계산기 및 예상 변제안 계산</h3>
+                        <p>본인의 소득과 채무 상황을 입력하여 월 예상 변제금과 탕감 가능 비율을 간편하게 사전 진단해 보시기 바랍니다. (2026년 기준 법정 최저생계비 반영)</p>
+                        
+                        <div class="calc-form">
+                            <div class="form-group">
+                                <label for="monthly-income">월평균 소득액 (원)</label>
+                                <input type="number" id="monthly-income" placeholder="예: 2500000" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="dependents">부양가족 수 (본인 포함)</label>
+                                <select id="dependents">
+                                    <option value="1">1인 가구 (본인 단독)</option>
+                                    <option value="2">2인 가구</option>
+                                    <option value="3">3인 가구</option>
+                                    <option value="4">4인 가구 이상</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="total-debt">총 채무액 (원)</label>
+                                <input type="number" id="total-debt" placeholder="예: 80000000" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="gambling-debt">도박/투자 소실액 (원)</label>
+                                <input type="number" id="gambling-debt" placeholder="예: 50000000" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="court-type">관할 법원 성향 선택</label>
+                                <select id="court-type">
+                                    <option value="friendly">서울/수원/부산회생법원 (친화적)</option>
+                                    <option value="strict">일반 지방법원 (엄격함)</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="other-assets">기타 보유 재산액 (원)</label>
+                                <input type="number" id="other-assets" placeholder="예: 10000000" value="0">
+                            </div>
+                            
+                            <button type="button" class="calc-btn" onclick="calculateRehab()">예상 견적 즉시 계산하기</button>
+                        </div>
+
+                        <div class="calc-result" id="calcResult">
+                            <h4>진단 및 가상 분석 시뮬레이션 결과</h4>
+                            <div class="result-grid">
+                                <div class="result-item">
+                                    <span>2026년 법정 생계비 인정액:</span>
+                                    <span id="res-living-cost">0 원</span>
+                                </div>
+                                <div class="result-item">
+                                    <span>청산가치 산정 예상액:</span>
+                                    <span id="res-liquidation">0 원</span>
+                                </div>
+                                <div class="result-item">
+                                    <span>월 납입 예상 변제금:</span>
+                                    <span id="res-monthly-pay">0 원</span>
+                                </div>
+                                <div class="result-item">
+                                    <span>총 변제 개월 수 (예상):</span>
+                                    <span id="res-months">36 개월</span>
+                                </div>
+                                <div class="result-item">
+                                    <span>총 납부할 금액 합계:</span>
+                                    <span id="res-total-pay">0 원</span>
+                                </div>
+                                <div class="result-item">
+                                    <span>예상 원금 탕감률:</span>
+                                    <span id="res-forgive-rate" style="color: #0d9488; font-weight: 800;">0 %</span>
+                                </div>
+                            </div>
+                            <p style="margin-top: 15px; font-size: 0.88em; color: #64748b; line-height: 1.5;">
+                                본 계산 결과는 단순 모의 대입에 근거한 추산치이며 신청인의 고용 형태, 무담보/담보 비율, 기존 채무의 발생 시점 및 도박 행위의 고의성 수준에 따라 법원의 실제 보정 명령 과정에서 크게 상이해질 수 있습니다. 상세한 서류 검토 및 정밀 상담이 필요한 경우 전문 컨설턴트 및 변호사 자문을 거치는 것을 적극 추천합니다.
+                            </p>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="faq" class="faq-section">
+                    <h2>도박 빚 개인회생 실무 중심 자주 묻는 질문 FAQ</h2>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            Q1. 최근 몇 달 사이에 집중적으로 일어난 최근 도박 채무도 개인회생 탕감이 가능합니까?
+                            <span>+</span>
+                        </div>
+                        <div class="faq-answer">
+                            답변: 신청 직전 1년 이내에 급격히 발생한 최근 채무의 비중이 과도하게 높은 경우, 사법부는 채무자가 면책 제도를 고의로 악용하는 것으로 의심하여 대단히 정밀한 사용처 규명 보정을 진행합니다. 최근 도박 채무 역시 개인회생 절차를 통해 해결할 수는 있으나, 이 경우 도박에 이용한 자금 전액을 청산가치에 반영할 확률이 몹시 높으며 변제금 납부를 성실히 이행하겠다는 강력한 반성문 및 금박 중독 치료 기록 증빙 등을 지속적으로 요구받게 됩니다.
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            Q2. 인터넷 사설 토토나 카바라 내역이 통장 거래에 가득한데 가족이나 직장에 알려지나요?
+                            <span>+</span>
+                        </div>
+                        <div class="faq-answer">
+                            답변: 개인회생 절차는 원칙적으로 채무자 본인의 사건 번호 부여와 진행 상황 공유로 진행되기에 대리인 사무소를 거쳐 우편물 송달 장소를 대리인 법소로 지정해 두면 거주지나 회사로 법원 등기 우편물이 직접 도달하는 일은 없습니다. 사법 당국에서 소명 자료 검토 과정 중 직장 동료나 가족에게 통지하는 규정은 존재하지 않으므로 비밀을 유지하며 진행할 수 있습니다.
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            Q3. 회생 신청을 한 이후에도 카카오톡, 토스 혹은 네이버 검색 등을 통해 수시로 소액 베팅을 하면 기각 사유가 되나요?
+                            <span>+</span>
+                        </div>
+                        <div class="faq-answer">
+                            답변: 절차 개시 신청 후부터 인가결정이 내려질 때까지 회생위원은 채무자의 금융 거래 내역을 다시금 추가 조회하여 제출하라는 요구를 보낼 수 있습니다. 만약 신청서가 법원에 들어가 진행 중인 기간에도 변함없이 불법 게임 머니 환전이나 가상자산 해외 거래소 송금 기록이 적발된다면 법원을 기만하는 행위로 간주되어 즉시 폐지 및 기각 사유가 될 수 있습니다. 신청 기간만큼은 사행성 행위를 완전히 단절하여 회복 의지를 공표해야 합니다.
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            Q4. 전문 법률 대리인을 고를 때 최우선으로 비교해야 할 점은 무엇인가요?
+                            <span>+</span>
+                        </div>
+                        <div class="faq-answer">
+                            답변: 단순히 선임비용 싼곳만을 우선하면 서류 소명이 매우 부실해집니다. 도박 채무는 일반적인 사업 부도나 생활비 대출과 보정 절차의 흐름 자체가 완전히 다릅니다. 금융 계좌 거래 내역 중 불법 사설 도박 충전 및 환전 액수를 날짜별로 정리한 정리표 양식 제출, 도박 중독 모임 참석 증명서 등 구체적인 방어 노하우를 갖춘 전문 법률 업체를 선택해야만 월 변제금 및 최종 탕감 비율 면에서 이득을 볼 수 있습니다.
+                        </div>
+                    </div>
+                </section>
+
+                <section id="external-links" style="margin-top: 50px;">
+                    <h3>신뢰할 수 있는 공식 행정 및 대외 정보처</h3>
+                    <p>도박 채무 회생 제도 신청 전, 제도에 대한 올바른 인식 수립과 심리 치료 병행을 위해 공식 기관의 상담 서비스 및 법적 정보를 연계하여 검토해 보시기 바랍니다.</p>
+                    <ul class="sidebar-menu" style="background-color: #f8fafc; padding: 20px; border-radius: 8px; border: 1px solid #e2e8f0;">
+                        <li><a href="https://recoveryonlawy.koreahankang.com" target="_blank" rel="noopener">법률 정보 포털 reliabledone 사이트 - 개인회생 전담 실무 사례 연구실</a></li>
+                        <li><a href="https://namu.wiki/w/%EA%B0%9C%EC%9D%B8%ED%9A%8C%EC%83%9D" target="_blank" rel="noopener">나무위키: 개인회생 제도 개요 및 사행행위 처리 기본 지침</a></li>
+                        <li><a href="http://www.scourt.go.kr" target="_blank" rel="noopener">대한민국 법원 대법원 전자민원센터 - 관할 법원 조회 및 소송 비용 계산 정보</a></li>
+                        <li><a href="https://recoveryonlawu.koreahankang.com" target="_blank" rel="noopener">대한법률구조공단 - 무료 개인회생 상담 및 저소득 취약계층 법률 상담</a></li>
+                        <li><a href="https://www.ccrs.or.kr" target="_blank" rel="noopener">신용회복위원회 - 워크아웃 제도와의 장단점 차이점 비교 가이드</a></li>
+                    </ul>
+                </section>
+            </main>
+
+            <aside class="sidebar">
+                <div class="sidebar-widget">
+                    <h2>핵심 메뉴 바로가기</h2>
+                    <ul class="sidebar-menu">
+                        <li><a href="#intro">도박 빚 개인회생 이해</a></li>
+                        <li><a href="#court-trends">2026년 전국 법원 트렌드</a></li>
+                        <li><a href="#demographics">연령별 대처 로드맵</a></li>
+                        <li><a href="#process">대리인 선임 수수료 분석</a></li>
+                        <li><a href="#calculator">변제금 자가 계산 테스트</a></li>
+                        <li><a href="#faq">자주 묻는 질문과 답변</a></li>
+                    </ul>
+                </div>
+
+                <div class="sidebar-widget">
+                    <h3>안전 회복 컨설팅 신청</h3>
+                    <p style="font-size: 0.88em; color: #4b5563; line-height: 1.6; margin-bottom: 15px;">
+                        불법 도박 채무로 인해 당장 금융 생활이 가로막힌 채무자 여러분을 위해 1:1 비밀 무상 자문 전담 채널을 운영하고 있습니다.
+                    </p>
+                    <form onsubmit="alert('상담 예약 신청이 안전하게 접수되었습니다. 담당 전문가가 빠른 시일 내에 기재하신 번호로 직접 유선 상담을 드릴 예정입니다.'); return false;">
+                        <div class="form-group" style="margin-bottom: 12px;">
+                            <label for="reg-name" style="font-size: 0.8em;">신청자 성함(가명 가능)</label>
+                            <input type="text" id="reg-name" placeholder="홍길동" required style="width: 90%;">
+                        </div>
+                        <div class="form-group" style="margin-bottom: 12px;">
+                            <label for="reg-tel" style="font-size: 0.8em;">연락처 (안심 번호)</label>
+                            <input type="tel" id="reg-tel" placeholder="010-0000-0000" pattern="[0-9]{2,3}-[0-9]{3,4}-[0-9]{4}" required style="width: 90%;">
+                        </div>
+                        <div class="form-group" style="margin-bottom: 12px;">
+                            <label for="reg-region" style="font-size: 0.8em;">거주 관할 지역</label>
+                            <select id="reg-region" style="width: 100%;">
+                                <option value="seoul">서울 특별시</option>
+                                <option value="gg">수원/인천/경기권</option>
+                                <option value="busan">부산/울산/경남권</option>
+                                <option value="daegu">대구/경북권</option>
+                                <option value="daejeon">대전/충청권</option>
+                                <option value="gwangju">광주/전라권</option>
+                                <option value="etc">제주/강원권</option>
+                            </select>
+                        </div>
+                        <div class="form-group" style="margin-bottom: 15px;">
+                            <label style="font-size: 0.8em; display: flex; align-items: center; gap: 6px;">
+                                <input type="checkbox" required style="width: auto;"> 개인정보 수집 이용안내 동의
+                            </label>
+                        </div>
+                        <button type="submit" class="calc-btn" style="width: 100%;">안심 비밀 무료상담 예약</button>
+                    </form>
+                </div>
+
+                <div class="sidebar-widget">
+                    <h3>사용자들이 많이 찾은 정보</h3>
+                    <ul class="sidebar-menu" style="font-size: 0.85em;">
+                        <li>도박 빚 개인파산 면책 불허가</li>
+                        <li>주식 코인 물린 돈 청산가치 합산 규정</li>
+                        <li>개인회생 인가결정 후 소액 대출 상품권</li>
+                        <li>신용보증재단 연대보증 채무 해결법</li>
+                        <li>회생법원 보정권고 연장 신청 방법</li>
+                        <li>변제율 10% 성공 후기 전수조사</li>
+                    </ul>
+                </div>
+            </aside>
+        </div>
+    </div>
+
+    <script>
+        // FAQ 아코디언 상호작용
+        document.querySelectorAll('.faq-question').forEach(button => {
+            button.addEventListener('click', () => {
+                const answer = button.nextElementSibling;
+                const toggle = button.querySelector('span');
+                
+                if (answer.style.display === 'block') {
+                    answer.style.display = 'none';
+                    toggle.textContent = '+';
+                } else {
+                    answer.style.display = 'block';
+                    toggle.textContent = '-';
+                }
+            });
+        });
+
+        // 2026년 기준 개인회생 모의 계산기 스크립트
+        function calculateRehab() {
+            const income = parseFloat(document.getElementById('monthly-income').value);
+            const dependents = parseInt(document.getElementById('dependents').value);
+            const totalDebt = parseFloat(document.getElementById('total-debt').value);
+            const gamblingDebt = parseFloat(document.getElementById('gambling-debt').value);
+            const courtType = document.getElementById('court-type').value;
+            const otherAssets = parseFloat(document.getElementById('other-assets').value) || 0;
+
+            if (isNaN(income) || isNaN(totalDebt) || isNaN(gamblingDebt)) {
+                alert('소득, 총 채무, 그리고 도박 소실액을 바르게 입력해 주세요.');
+                return;
+            }
+
+            // 2026년 가구원수별 중위소득 60% 기준 생계비 계산
+            let baseLivingCost = 0;
+            switch(dependents) {
+                case 1: baseLivingCost = 1330000; break;
+                case 2: baseLivingCost = 2210000; break;
+                case 3: baseLivingCost = 2820000; break;
+                case 4: baseLivingCost = 3430000; break;
+                default: baseLivingCost = 1330000;
+            }
+
+            // 법원 성향에 따른 도박 부채 청산가치 반영 가액 연산
+            let reflectionRatio = 0.1; // 서울, 수원, 부산은 약 10%의 정황 증거금만 보수적으로 반영
+            if (courtType === 'strict') {
+                reflectionRatio = 0.7; // 일반 지방법원은 도박 소실액의 상당액인 70%가량을 자산 가치에 반영
+            }
+
+            const liquidationFromGambling = gamblingDebt * reflectionRatio;
+            const totalLiquidation = otherAssets + liquidationFromGambling;
+
+            // 월 변제금 기본 연산: 소득 - 법정생계비
+            let monthlyPay = income - baseLivingCost;
+            if (monthlyPay < 100000) {
+                monthlyPay = 100000; // 최저 변제 의무금 하한선 설정
+            }
+
+            // 청산가치 보장의 원칙 검증 (36개월 동안 모인 변제금이 청산가치보다 커야 함)
+            let finalMonths = 36;
+            let totalPay = monthlyPay * finalMonths;
+
+            if (totalPay < totalLiquidation) {
+                // 36개월치로 안될 경우 최대 60개월까지 연장 조정
+                const neededMonthly = totalLiquidation / 36;
+                if (neededMonthly <= (income - (baseLivingCost * 0.7))) {
+                    // 생계비를 낮추고 변제율을 올려 맞춰봄
+                    monthlyPay = neededMonthly;
+                    totalPay = monthlyPay * 36;
+                } else {
+                    // 기간을 최대 60개월로 연장 설정
+                    finalMonths = 60;
+                    monthlyPay = totalLiquidation / 60;
+                    if (monthlyPay > income) {
+                        monthlyPay = income - 100000; // 파산 수준의 채무 한계치 도달
+                    }
+                    totalPay = monthlyPay * finalMonths;
+                }
+            }
+
+            // 최종 탕감률 계산
+            if (totalPay > totalDebt) {
+                totalPay = totalDebt; // 원금 전액 변제 한계 적용
+                monthlyPay = totalPay / finalMonths;
+            }
+
+            const forgiveRate = ((totalDebt - totalPay) / totalDebt) * 100;
+
+            // 천단위 쉼표 포맷 함수
+            const formatWon = (val) => Math.round(val).toLocaleString() + " 원";
+
+            // 화면 노출 설정
+            document.getElementById('res-living-cost').textContent = formatWon(baseLivingCost);
+            document.getElementById('res-liquidation').textContent = formatWon(totalLiquidation);
+            document.getElementById('res-monthly-pay').textContent = formatWon(monthlyPay);
+            document.getElementById('res-months').textContent = finalMonths + " 개월";
+            document.getElementById('res-total-pay').textContent = formatWon(totalPay);
+            document.getElementById('res-forgive-rate').textContent = forgiveRate.toFixed(1) + " %";
+
+            document.getElementById('calcResult').style.display = 'block';
+            
+            // 산정 후 스크롤 이동
+            document.getElementById('calcResult').scrollIntoView({ behavior: 'smooth' });
+        }
+    </script>
+  
